@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get("/posts/{post}/edit", "PostController@edit");
-Route::get("/posts/create", "PostController@create");
-Route::get('/posts/{post}', 'PostController@show');
-Route::get('/', 'PostController@index');
+Route::get("/tasks/{task}/edit", "TaskController@edit");
+Route::get("/tasks/create", "TaskController@create");
+Route::get('/tasks/{task}', 'TaskController@show');
+Route::get('/', 'TaskController@index');
 
-Route::post("/posts", "PostController@store");
+Route::post("/tasks", "TaskController@store");
 
-Route::put("/posts/{post}", "PostController@update");
+Route::put("/tasks/{task}", "TaskController@update");

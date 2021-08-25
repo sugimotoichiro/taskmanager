@@ -14,22 +14,22 @@
     </head>
     
     <body>
-       <h1>今週のタスク</h1>
+       <h1>Blog Name</h1>
             <p class="create">
-            <a href ="/tasks/create">create</a>  
+            <a href ="/posts/create">create</a>  
             </p>
-       <div class="tasks">
-           @foreach($tasks as $task)
-               <div class ="task">
-                   <a href ="/tasks/{{$task->id}}">
-                   <h2 class="title">{{ $task->title }}</h2>
+       <div class="posts">
+           @foreach($posts as $post)
+               <div class ="post">
+                   <a href ="/posts/{{$post->id}}">
+                   <h2 class="title">{{ $post->title }}</h2>
                    </a>
-                   <p　class="body">{{ $task ->body }}</p>
+                   <p　class="body">{{ $post ->body }}</p>
                </div>
            @endforeach
         </div>
         <div class='paginate'>
-            {{ $tasks->links() }}
+            {{ $posts->links() }}
         </div>
     </body>
 </html>

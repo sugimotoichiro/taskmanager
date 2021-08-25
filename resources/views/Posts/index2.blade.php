@@ -15,8 +15,8 @@
     
     <body>
        <h1>杉本のブログ</h1>
-       <div class="tasks">
-           <div class ="task">
+       <div class="posts">
+           <div class ="post">
                <h2 class="title">7月11日 </h2>
                <p　class="body">今日も基礎実験やった。</p>
            </div>

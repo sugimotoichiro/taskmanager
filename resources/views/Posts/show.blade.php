@@ -16,12 +16,12 @@
     <body>
        <h1>Blog Name</h1>
               <div class ="edit">
-                    <p class ="edit">[<a href ="/tasks/{{ $task->id }}/edit">edit</a>]</p>
+                    <p class ="edit">[<a href ="/posts/{{ $post->id }}/edit">edit</a>]</p>
               </div>
-              <div class ="task">
-                   <h2 class="title">{{ $task->title }}</h2>
-                   <p　class="body">{{ $task ->body }}</p>
-                   <p　class="updated_at">{{ $task ->updated_at }}</p>
+              <div class ="post">
+                   <h2 class="title">{{ $post->title }}</h2>
+                   <p　class="body">{{ $post ->body }}</p>
+                   <p　class="updated_at">{{ $post ->updated_at }}</p>
               </div>
               <div class="back">
                   <a href= "/">back</a>
