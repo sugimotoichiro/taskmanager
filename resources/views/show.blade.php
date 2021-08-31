@@ -14,7 +14,7 @@
     </head>
     
     <body>
-       <h1>Blog Name</h1>
+       <h1>Task Management</h1>
               <div class ="edit">
                     <p class ="edit">[<a href ="/tasks/{{ $task->id }}/edit">edit</a>]</p>
               </div>

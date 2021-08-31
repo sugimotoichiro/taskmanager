@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Task;
 use App\Http\Requests\TaskRequest;
+
 
 class TaskController extends Controller
 {
     public function index(Task $task)
     {
-        return view("index")->with(["tasks" => $task->getPaginateByLimit(5)]);
+        return view("weektasks")->with(["tasks" => $task->timelimit()]);
     }
     public function show(Task $task)
     {
@@ -35,5 +37,6 @@ class TaskController extends Controller
         $task->fill($input)->save();
         return redirect("/tasks/". $task->id);
     }
+    
 }
 

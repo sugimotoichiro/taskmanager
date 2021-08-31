@@ -25,6 +25,10 @@
                    <h2 class="title">{{ $task->title }}</h2>
                    </a>
                    <p　class="body">{{ $task ->body }}</p>
+                   <p  class="timelimit">{{ $task ->timelimit }}</p>
+                   <p  class="checkbox">OK!
+                        <input type="checkbox" name="OK" value="OKtask">
+                   </p>
                </div>
            @endforeach
         </div>
