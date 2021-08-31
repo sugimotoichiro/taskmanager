@@ -18,14 +18,18 @@
                 @csrf
                 @method("PUT")
                 <div class ="title">
-                    <h2>Title</h2>
+                    <h2>タスク名</h2>
                     <input type="text" name="task[title]" value="{{old($task->title)}}"/>
                     <p class="title_error" style="color:red">{{$errors->first("task.title")}}</p>
                 </div>
                 <div class ="body">
-                    <h2>body</h2>
+                    <h2>タスク内容</h2>
                     <textarea type="text" name="task[body]" >{{old($task->body) }}</textarea>
                     <p class="body_error" style="color:red">{{($errors->first("task.body"))}}</p>
+                <div class ="timelimit">
+                    <h2>タスク期限</h2>
+                    <input type="date" name="task[timelimit]" placeholder="〇月〇日" value="{{old($task->timelimit)}}"/>
+                    <p class ="body_error" style="color:red">{{$errors->first("task.timelimit")}}</p>    
                 </div>
                 <input type="submit" value="update">
             </form>

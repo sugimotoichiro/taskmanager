@@ -13,7 +13,7 @@
         
     </head>
     <body>
-       <h1>Blog Name</h1>
+       <h1>Task Manegement</h1>
             <form action = "/tasks" method="POST" >
                 @csrf
                 <div class ="title">
@@ -25,6 +25,11 @@
                     <h2>タスク内容</h2>
                     <textarea name="task[body]" placeholder="今日もお疲れ様でした"> {{old("task.body")}}</textarea>
                     <p class ="body_error" style="color:red">{{$errors->first("task.body")}}</p>
+                </div>
+                <div class ="timelimit">
+                    <h2>タスク期限</h2>
+                    <input type="date" name="task[timelimit]" placeholder="〇月〇日" value="{{old("task.title")}}"/>
+                    <p class ="body_error" style="color:red">{{$errors->first("task.timelimit")}}</p>
                 </div>
                 <input type="submit" value="store">
             </form>
